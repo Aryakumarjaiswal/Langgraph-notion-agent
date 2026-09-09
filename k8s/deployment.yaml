@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notion-agent-deployment
+  labels:
+    app: notion-agent
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: notion-agent
+  template:
+    metadata:
+      labels:
+        app: notion-agent
+    spec:
+      containers:
+      - name: notion-agent
+        image: YOUR_DOCKERHUB_USERNAME/notion-agent:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8501
+          name: streamlit
+        envFrom:
+        - secretRef:
+            name: notion-agent-secrets
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "1000m"
+            memory: "1Gi"
