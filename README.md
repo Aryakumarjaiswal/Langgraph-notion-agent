@@ -7,6 +7,9 @@ The application features a **Streamlit** chat interface, a **FastAPI** backend w
 ---
 <img width="1322" height="605" alt="image" src="https://github.com/user-attachments/assets/49b825cb-d33f-4c1c-b38f-d0cfd8e66ec3" />
 
+## 🎥 Demo
+👉 [Watch the Project Demo](https://drive.google.com/file/d/1ZahB4N04B0puFqydeu9_8Uj73jMqnblg/view?usp=sharing)
+
 ## System Architecture
 
 ```text
@@ -30,13 +33,11 @@ The application features a **Streamlit** chat interface, a **FastAPI** backend w
 ```
 
 ---
-## 🎥 Demo
 
-👉 [Watch the Project Demo](https://drive.google.com/file/d/1ZahB4N04B0puFqydeu9_8Uj73jMqnblg/view?usp=sharing)
 ## Tech Stack
 
 - **Agent Orchestration:** LangGraph (ReAct pattern with conditional tool routing)
-- **LLM Engine:** Google Gemini (`gemini-3.6-flash`)
+- **LLM Engine:** Google Gemini 3.6-Flash
 - **Tool Integration:** Notion MCP 
 - **User Interface:** Streamlit 
 - **Backend API:** FastAPI with JWT Authentication
@@ -48,7 +49,8 @@ The application features a **Streamlit** chat interface, a **FastAPI** backend w
 ## Key Engineering Highlights
 
 - **ReAct Flow Control:** Implements dynamic conditional edges in LangGraph to inspect agent message outputs and automatically loop between tool execution and terminal responses.
-- **Auto-Scaling Infrastructure:** Configured with Kubernetes **Horizontal Pod Autoscaler (HPA)** to dynamically scale pod replicas (2–6 pods) based on target CPU utilization (70%).
+- **Auto-Scaling Infrastructure:** Configured with Kubernetes
+- **Horizontal Pod Autoscaler (HPA)** to dynamically scale pod replicas (2–6 pods) based on target CPU utilization (70%).
 - **CI/CD Pipeline:** Automated GitHub Actions workflow triggers on push to `main` to build, tag, and push Docker images.
 - **Stateless Multi-Pod Readiness:** Managed session execution enabling seamless horizontal scaling without shared state bottlenecks.
 
@@ -104,7 +106,7 @@ JWT_SECRET=your-secure-jwt-secret
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/NOTION-MCP.git
+https://github.com/Aryakumarjaiswal/Langgraph-notion-mcp.git
 cd NOTION-MCP/notion-agent
 
 ```
