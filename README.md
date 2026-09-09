@@ -75,6 +75,7 @@ NOTION-MCP/
 │   ├── app.py                 # Streamlit async chat UI
 │   ├── Dockerfile             # Multi-stage container build definition
 │   ├── gemini_chat.py         # Direct Gemini LLM handler
+|   ├── ci_test.py             # final ci code test
 │  
 ├── .env                       # Local environment secrets (gitignored)
 |── README.md
