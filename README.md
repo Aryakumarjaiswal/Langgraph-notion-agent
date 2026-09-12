@@ -8,7 +8,7 @@ The application features a **Streamlit** chat interface, a **FastAPI** backend w
 <img width="1322" height="605" alt="image" src="https://github.com/user-attachments/assets/49b825cb-d33f-4c1c-b38f-d0cfd8e66ec3" />
 
 ## 🎥 Demo
-👉 [Watch the Project Demo]()
+👉 [Watch the Project Demo](https://drive.google.com/file/d/1ZahB4N04B0puFqydeu9_8Uj73jMqnblg/view?usp=sharing)
 
 ## 🏗️ System Architecture
 
