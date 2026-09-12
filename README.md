@@ -5,6 +5,10 @@ An enterprise-ready, cloud-native AI task management system that enables users t
 The application features a **Streamlit** chat interface, a **FastAPI** backend with JWT authentication, and is engineered for production with **Docker**, **Kubernetes (HPA)**, and **GitHub Actions CI/CD**.
 
 ---
+<img width="1322" height="605" alt="image" src="https://github.com/user-attachments/assets/49b825cb-d33f-4c1c-b38f-d0cfd8e66ec3" />
+
+## 🎥 Demo
+👉 [Watch the Project Demo]()
 
 ## 🏗️ System Architecture
 
@@ -33,7 +37,7 @@ The application features a **Streamlit** chat interface, a **FastAPI** backend w
 ## 🛠️ Tech Stack
 
 - 🧠 **Agent Orchestration:** LangGraph (ReAct pattern with conditional tool routing)
-- ⚡ **LLM Engine:** Google Gemini (`gemini-3.6-flash`)
+- ⚡ **LLM Engine:** Google Gemini 3.6-Flash
 - 🔌 **Tool Integration:** Notion MCP 
 - 🖥️ **User Interface:** Streamlit 
 - 🚀 **Backend API:** FastAPI with JWT Authentication
@@ -45,8 +49,9 @@ The application features a **Streamlit** chat interface, a **FastAPI** backend w
 ## 🌟 Key Engineering Highlights
 
 - 🔄 **ReAct Flow Control:** Implements dynamic conditional edges in LangGraph to inspect agent message outputs and automatically loop between tool execution and terminal responses.
-- 📈 **Auto-Scaling Infrastructure:** Configured with Kubernetes **Horizontal Pod Autoscaler (HPA)** to dynamically scale pod replicas (2–6 pods) based on target CPU utilization (70%).
-- ⚙️ **CI/CD Pipeline:** Automated GitHub Actions workflow triggers on push to `main` to build, tag, and push Docker images.
+- 📈 **Auto-Scaling Infrastructure:** Configured with Kubernetes
+- ⚙️ **Horizontal Pod Autoscaler (HPA)** to dynamically scale pod replicas (2–6 pods) based on target CPU utilization (70%).
+- 🚀 **CI/CD Pipeline:** Automated GitHub Actions workflow triggers on push to `main` to build, tag, and push Docker images.
 - 🌐 **Stateless Multi-Pod Readiness:** Managed session execution enabling seamless horizontal scaling without shared state bottlenecks.
 
 ---
@@ -70,10 +75,11 @@ NOTION-MCP/
 │   ├── app.py                 # Streamlit async chat UI
 │   ├── Dockerfile             # Multi-stage container build definition
 │   ├── gemini_chat.py         # Direct Gemini LLM handler
-│   └── requirements.txt       # Python dependencies
+|   ├── test.py             # final ci code test
+│  
 ├── .env                       # Local environment secrets (gitignored)
-└── README.md
-
+|── README.md
+│── requirements.txt       # Python dependencies
 ```
 
 ---
@@ -101,7 +107,7 @@ JWT_SECRET=your-secure-jwt-secret
 1. 📥 **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/NOTION-MCP.git
+https://github.com/Aryakumarjaiswal/Langgraph-notion-mcp.git
 cd NOTION-MCP/notion-agent
 
 ```
@@ -156,10 +162,3 @@ kubectl get pods,svc,hpa
 ```
 
 ---
-
-## 💬 Example Agent Queries
-
-- 🔍 *"List all blocked tasks in the workspace."*
-- 📝 *"Create a task for Rahul Sharma: Write API documentation, due tomorrow, priority High."*
-- 📋 *"Show all open tasks assigned to Amit Kumar."*
-- ✅ *"Mark the dashboard charts task as Done."*
