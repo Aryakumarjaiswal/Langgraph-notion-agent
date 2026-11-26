@@ -104,31 +104,34 @@ JWT_SECRET=your-secure-jwt-secret
 
 ## 💻 Local Development
 
-1. 📥 **Clone the repository:**
+1. 🐍 **Set up Python Virtual Environment:**
 
 ```bash
-https://github.com/Aryakumarjaiswal/Langgraph-notion-mcp.git
+python -m venv VM
+
+VM\Scripts\activate.bat
+
+pip install -r requirements.txt
+```
+2. 📥 **Clone the repository:**
+Activate the virtual environment
+```bash
+git init
+
+git clone https://github.com/Aryakumarjaiswal/Langgraph-notion-mcp.git
+
 cd NOTION-MCP/notion-agent
 
 ```
 
-1. 🐍 **Set up Python Virtual Environment:**
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-
-```
-
-1. 🎈 **Run the Streamlit Chat App:**
+3. 🎈 **Run the Streamlit Chat App:**
 
 ```bash
 streamlit run app.py
 
 ```
 
-1. ⚡ **Run the FastAPI Backend (Optional):**
+4. ⚡ **Run the FastAPI Backend (Optional):**
 
 ```bash
 uvicorn apis:app --reload --port 8000
